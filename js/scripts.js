@@ -99,7 +99,7 @@ $(function() {
 					zposition		: 'next',
 					moveBackground	: true
 				};
-                options.position = 'left',
+                
 				$('#page-left').mmenu( options );
 
 				options.position = 'right',
@@ -118,6 +118,8 @@ $(function() {
                             $inside.offset({ top: 50, left:l});
                             if ($inside.css("margin-right") < 0)
                               $inside.css("margin-right", 0);
+                            if ($inside.css("margin-left") < window.innerWidth*.3)
+                              $inside.css("margin-left", Math.floor(window.innerWidth*.05));
                             //$inside.css("width", window.innerWidth);
                             //rsz();
                           },0);
