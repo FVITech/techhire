@@ -415,7 +415,7 @@ input { outline: none; }
 /*	07: MEDIA QUERIES
 /*-----------------------------------------------------------------------------------*/
 
-@media all and (max-width: 568px) {
+@media all and (max-width: 768px) {
 .content h1, h1 { font-size: 45px!important; }
 .soon { font-size: 12px; }
 .content { padding: 40px 0 20px!important; }
@@ -438,6 +438,7 @@ ul{
     list-style-position: inside;
 }
 
+
 li{
     padding:0;
     margin-bottom:0 !important;
@@ -457,3 +458,10 @@ li{
     width:25% !important;
 }
  
+#page-left .container, #page-right .container{
+  width: 92%;
+  max-width: 750px;
+}
+#page-left, body.page-left{
+  overflow-x:hidden;
+}

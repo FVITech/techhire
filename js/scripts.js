@@ -65,19 +65,27 @@ $(".rotate").textrotator({
 					$(content).removeClass(out).addClass(enter).fadeIn('fast');
 				}, 700);
 			  }, 500);
-			});
-		});	
+		});
+});	
 
 /***************************************************
 	 CENTER CONTENT
 ***************************************************/
+var rsz;
 $(function() {
     $(window).on('resize', function resize()  {
+      rsz = resize;
         $(window).off('resize', resize);
         setTimeout(function () {
             var content = $('.content');
             var top = (window.innerHeight - content.height()) / 2;
             content.css('top', Math.max(0, top) + 'px');
+          if($("body").hasClass("page-left")){
+            var elem = $("#page-left").find(".container");
+            var l = elem.offset().left;
+            elem.offset({top: 0, left: 0});
+            elem.css("width", "90%");
+          }
             $(window).on('resize', resize);
         }, 50);
     }).resize();
@@ -89,8 +97,9 @@ $(function() {
 		var options = {
 					classes			: 'mm-fullscreen',
 					zposition		: 'next',
-					moveBackground	: false
+					moveBackground	: true
 				};
+                options.position = 'left',
 				$('#page-left').mmenu( options );
 
 				options.position = 'right',
@@ -102,9 +111,15 @@ $(function() {
 						function()
 						{
                           var $inside = $(this).find("#page-right-inside");
+                          if (!$inside.offset()) $inside = $("#page-left").find(".container");
                           $('body').addClass( this.id );
                           setTimeout(function(){
-                            $inside.offset().top = 0;
+                            var l = $inside.offset().left;
+                            $inside.offset({ top: 50, left:l});
+                            if ($inside.css("margin-right") < 0)
+                              $inside.css("margin-right", 0);
+                            //$inside.css("width", window.innerWidth);
+                            //rsz();
                           },0);
                               
 						}
