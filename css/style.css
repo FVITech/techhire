@@ -15,7 +15,7 @@ Purchase:  http://themeforest.net/user/josweb
 
 /*-----------------------------------------------------------------------------------*/
 /*	01: GENERAL STYLING
-/*-----------------------------------------------------------------------------------*/	
+/*-----------------------------------------------------------------------------------*/
 html, body { height: 100%; padding: 0; margin: 0; }
 
 body {
@@ -109,7 +109,7 @@ h2 { font-size: 28px; }
 h3 { font-size: 24px; }
 h4 { font-size: 20px; }
 h5 { font-size: 18px; }
-h6 { font-size: 16px; }	
+h6 { font-size: 16px; }
 p { margin: 20px 0; }
 .lead { font-size: 14px; color: #fff; padding: 0 0 10px;}
 
@@ -152,7 +152,7 @@ p { margin: 20px 0; }
 .vegas-background {
 	-ms-interpolation-mode: bicubic;
 	image-rendering: optimizeQuality;
-    max-width: none !important; 
+    max-width: none !important;
 	z-index: -2;
 }
 .vegas-overlay, .vegas-background {
@@ -191,7 +191,7 @@ p { margin: 20px 0; }
 
 /*-----------------------------------------------------------------------------------*/
 /*	02: INTRO PAGE
-/*-----------------------------------------------------------------------------------*/	
+/*-----------------------------------------------------------------------------------*/
 
 /**** LOGO ****/
 .logo { margin: 0 auto 8px; }
@@ -251,7 +251,7 @@ p { margin: 20px 0; }
 
 /*-----------------------------------------------------------------------------------*/
 /*	03: SUBSCRIBE PAGE
-/*-----------------------------------------------------------------------------------*/	
+/*-----------------------------------------------------------------------------------*/
 
 /**** SUBSCRIBE FORM ****/
 #ajax-contact-form{ margin-top:30px; }
@@ -259,7 +259,7 @@ p { margin: 20px 0; }
 #ajax-contact-form input, textarea{
 	background: transparent;
 	color: #f0f0f0!important;
-	background:rgba(255,255,255,.2); 
+	background:rgba(255,255,255,.2);
 	border-left: 0px none;
 	border-right: 0px none;
 	border-top: 0px none;
@@ -318,12 +318,12 @@ input { outline: none; }
 	font-size: 20px;
 	line-height: 28px
 	width: 100%;
-	clear: both; 	
+	clear: both;
 }
 
 /*-----------------------------------------------------------------------------------*/
 /*	04: COUNTDOWN PAGE
-/*-----------------------------------------------------------------------------------*/	
+/*-----------------------------------------------------------------------------------*/
 
 /**** COUNTDOWN ****/
 .counter {
@@ -362,14 +362,14 @@ input { outline: none; }
 /*-----------------------------------------------------------------------------------*/
 /*	05: ABOUT PAGE
 /*-----------------------------------------------------------------------------------*/
-#overlay { 
+#overlay {
 	display: none;
 	background:rgba(24, 37, 52, 1.0) ;
 	color: #fff;
     position: fixed!important;
 	overflow-y: scroll!important;
 	width: 100%;
-	height: 100%; 
+	height: 100%;
 	min-height: 100%;
 	top: 0; left: 0; right: 0; bottom: 0;
     z-index: 1;
@@ -415,7 +415,7 @@ input { outline: none; }
 /*	07: MEDIA QUERIES
 /*-----------------------------------------------------------------------------------*/
 
-@media all and (max-width: 568px) {
+@media all and (max-width: 768px) {
 .content h1, h1 { font-size: 45px!important; }
 .soon { font-size: 12px; }
 .content { padding: 40px 0 20px!important; }
@@ -438,6 +438,7 @@ ul{
     list-style-position: inside;
 }
 
+
 li{
     padding:0;
     margin-bottom:0 !important;
@@ -456,6 +457,12 @@ li{
 .cs-logo {
     width:25% !important;
 }
-#page-left .container{
+
+
+#page-left .container, #page-right .container{
+  width: 92%;
   max-width: 750px;
+}
+#page-left, body.page-left{
+  overflow-x:hidden;
 }
