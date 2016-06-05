@@ -456,4 +456,6 @@ li{
 .cs-logo {
     width:25% !important;
 }
- 
+#page-left .container{
+  max-width: 750px;
+}

@@ -77,7 +77,7 @@ $(function() {
         setTimeout(function () {
             var content = $('.content');
             var top = (window.innerHeight - content.height()) / 2;
-            content.css('top', Math.max(0, top) + 'px');
+            content.css('top', Math.max(20, top) + 'px');
             $(window).on('resize', resize);
         }, 50);
     }).resize();
@@ -102,6 +102,7 @@ $(function() {
 						function()
 						{
                           var $inside = $(this).find("#page-right-inside");
+                          if (!$inside.offset() ) $inside = $("#page-left .container");
                           $('body').addClass( this.id );
                           setTimeout(function(){
                             $inside.offset().top = 0;
